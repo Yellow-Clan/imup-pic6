@@ -4,7 +4,7 @@
   "description": "For uploading image",
   "main": "index.js",
   "scripts": {
-    "start": "node app",
+    "start": "node index.js",
     "dev": "nodemon src/index.js"
   },
   "author": "Neha Sunal",

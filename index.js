@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/images',express.static('images'));
 
 app.get('/', (req, res) => { 
-    res.send("Heyy!!"); 
+    res.send("Heyy ya estas conectado!!"); 
 });
 
 //cargar las rutas
@@ -31,6 +31,6 @@ require('./routes/image_routes')(app);
 // func(app);
 
 app.listen(port, () => {
-    console.log('Server port ' + port);
+    console.log('Visita el puerto: ' + port);
 })
 
