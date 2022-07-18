@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon src/index.js"
   },
-  "author": "Neha Sunal",
+  "author": "YellClan",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
