@@ -30,7 +30,7 @@ exports.upload = multer({
 });
 
 
-exports.uploadSingleImage=async(req,res)=>{
+exports.uploadSingleImage=async(req,res)=>{//codigos para subir un sola imagen 
     
  const allquery =await client.query(`INSERT INTO users(name, icon) VALUES ('${req.body.name}', '${req.file.filename}')`);
     
@@ -39,7 +39,7 @@ exports.uploadSingleImage=async(req,res)=>{
 }
 
 
-exports.uploadMultipleImage=async(req,res)=>{
+exports.uploadMultipleImage=async(req,res)=>{//codigo para subir imagenes en simultaneo
       
    for(var i=0;i<req.files.length;i++){
      const allquery =await client.query(`INSERT INTO users(name, icon) VALUES ('${req.body.name}','${req.files[i].filename}')`);
