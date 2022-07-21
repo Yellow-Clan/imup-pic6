@@ -16,7 +16,7 @@ const multerStorage = multer.diskStorage({
 
 const multerFilter = (req, file, cb) => {
    
-        if (!file.originalname.match(/\.(png|jpg)$/)) { 
+        if (!file.originalname.match(/\.(png|jpg|docx)$/)) { // anañida para el formato de archivo admitido
              // upload solo formatos png y jpg 
            return cb(new Error('Sube una imagen'))
          }
