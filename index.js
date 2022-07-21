@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 // Analizar solicitudes de tipo de contenido - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/images',express.static('images'));
+app.use('/images',express.static('images'));//codigo para dar acceso a get de las imagenes express.static
 
 app.get('/', (req, res) => { 
     res.send("Heyy!!"); 
