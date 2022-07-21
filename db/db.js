@@ -1,19 +1,12 @@
 const { Client } = require('pg');
 
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+    user: 'postgres',
+    host: 'localhost',
+    database: 'testimageupload',
+    password: 'admin',
+    port: 5432,
 });
-
-// const client = new Client({
-//     user: 'postgres',
-//     host: 'localhost',
-//     database: 'testimageupload',
-//     password: 'admin',
-//     port: 5432,
-// });
 
 client.connect()
     .then(console.log("Conectado a la base de Datos!"))
